@@ -1,8 +1,9 @@
-RUN mkdir /opt/docker
-
 ### vi Dockerfile
 # Pull base image 
 FROM tomcat:8-jre8 
+
+#mkdir /opt/docker
+RUN mkdir /opt/docker
 
 # Maintainer
 MAINTAINER "valaxytech" 
