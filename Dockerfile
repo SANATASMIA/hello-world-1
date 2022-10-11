@@ -1,4 +1,4 @@
-mkdir /opt/docker
+RUN mkdir /opt/docker
 
 ### vi Dockerfile
 # Pull base image 
