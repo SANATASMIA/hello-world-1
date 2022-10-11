@@ -9,8 +9,8 @@ RUN mkdir /opt/docker
 MAINTAINER "valaxytech" 
 
 # copy war file on to container 
-COPY ./webapp.war /usr/local/tomcat/webapps
-
+#COPY ./webapp.war /usr/local/tomcat/webapps
+RUN cp ./webapp.war /usr/local/tomcat/webapps
 
 
 
