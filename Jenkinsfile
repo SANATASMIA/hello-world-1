@@ -13,6 +13,22 @@ pipeline{
             steps{
                 sh " mvn clean package "
             }
+             steps{
+                sh " mv target/*.war target/webapp.war "
+            }
+        }
+        stage("Deploy on tomcat"){
+            steps{
+                sshagent(['tomcat-new']) {
+                    sh """
+                          scp -o StrictHostKeyChecking=no target/webapp.war ec2-user@172.31.95.33:/opt/tomcat_8/apache-tomcat-8.5.83/webapps/
+                          ssh ec2-user@172.31.95.33 tomcatdown
+                          ssh ec2-user@172.31.95.33 tomcatup
+
+                    """
+                
+                }
+            }
         }
     }
 }
