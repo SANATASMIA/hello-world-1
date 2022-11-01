@@ -12,7 +12,7 @@ pipeline{
         stage("maven Build"){
             steps{
                 sh " mvn clean package "
-                sh " mv  /var/lib/jenkins/workspace/git-checkout-pipeline/webapp/target/webapp.war  /opt/tomcat_8/apache-tomcat-8.5.83/webapps/"
+                sh " sudo mv  /var/lib/jenkins/workspace/git-checkout-pipeline/webapp/target/webapp.war  /opt/tomcat_8/apache-tomcat-8.5.83/webapps/"
             }
         }
         stage("Deploy on tomcat"){
