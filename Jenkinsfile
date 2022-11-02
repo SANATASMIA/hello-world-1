@@ -1,5 +1,6 @@
-currentBuild.DisplayName = "online-shopping-#"+currentBuild.number
-currentBuild.Description = "#${BUILD_NUMBER}, branch ${BRANCH}"
+//currentBuild.DisplayName = "online-shopping-#"+currentBuild.number
+//currentBuild.Description = "#${BUILD_NUMBER}, branch ${BRANCH}"
+currentBuild.displayName = "The new build name."
 pipeline{
     agent any
     environment{
