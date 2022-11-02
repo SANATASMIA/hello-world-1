@@ -1,4 +1,5 @@
 currentBuild.displayName = "online-shopping-#"+currentBuild.number
+currentBuild.description = "#${BUILD_NUMBER}, branch ${BRANCH}"
 pipeline{
     agent any
     environment{
