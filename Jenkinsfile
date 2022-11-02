@@ -1,5 +1,5 @@
-currentBuild.displayName = "online-shopping-#"+currentBuild.number
-currentBuild.description = "#${BUILD_NUMBER}, branch ${BRANCH}"
+currentBuild.DisplayName = "online-shopping-#"+currentBuild.number
+currentBuild.Description = "#${BUILD_NUMBER}, branch ${BRANCH}"
 pipeline{
     agent any
     environment{
