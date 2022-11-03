@@ -3,18 +3,18 @@ pipeline{
     stages{
         stage("Git-Checkout"){
             agent{
-            label "master"
+                label "master"
             }
             steps{
-            git url: "https://github.com/SANATASMIA/hello-world-1"
+                git url: "https://github.com/SANATASMIA/hello-world-1"
             }
             
-            stage("Maven-Build"){
-            agent{
-            label "linux-one"
+        stage("Maven-Build"){
+                agent{
+                    label "linux-one"
             }
-            steps{
-            sh "mvn clean install package"
+                steps{
+                    sh "mvn clean install package"
             }
         }
     }
