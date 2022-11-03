@@ -6,7 +6,7 @@ pipeline{
                 label "master"
             }
             steps{
-                git url: "https://github.com/SANATASMIA/hello-world-1"
+                git url: "https://github.com/SANATASMIA/hello-world-1.git"
             }
             
         stage("Maven-Build"){
